@@ -1,13 +1,15 @@
-package event
+package main
 
 import (
 	"fmt"
+
+	"github.com/hello2mao/go-common/event"
 )
 
-func ExampleFeed_acknowledgedEvents() {
+func main() {
 	// This example shows how the return value of Send can be used for request/reply
 	// interaction between event consumers and producers.
-	var feed Feed
+	var feed event.Feed
 	type ackedEvent struct {
 		i   int
 		ack chan<- struct{}

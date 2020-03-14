@@ -1,13 +1,15 @@
-package event
+package main
 
 import (
 	"fmt"
+
+	"github.com/hello2mao/go-common/event"
 )
 
-func ExampleNewSubscription() {
+func main() {
 	// Create a subscription that sends 10 integers on ch.
 	ch := make(chan int)
-	sub := NewSubscription(func(quit <-chan struct{}) error {
+	sub := event.NewSubscription(func(quit <-chan struct{}) error {
 		for i := 0; i < 10; i++ {
 			select {
 			case ch <- i:

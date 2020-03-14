@@ -1,8 +1,10 @@
-package event
+package main
 
 import (
 	"fmt"
 	"sync"
+
+	"github.com/hello2mao/go-common/event"
 )
 
 // This example demonstrates how SubscriptionScope can be used to control the lifetime of
@@ -10,8 +12,8 @@ import (
 //
 // Our example program consists of two servers, each of which performs a calculation when
 // requested. The servers also allow subscribing to results of all computations.
-type divServer struct{ results Feed }
-type mulServer struct{ results Feed }
+type divServer struct{ results event.Feed }
+type mulServer struct{ results event.Feed }
 
 func (s *divServer) do(a, b int) int {
 	r := a / b
@@ -30,7 +32,7 @@ func (s *mulServer) do(a, b int) int {
 type App struct {
 	divServer
 	mulServer
-	scope SubscriptionScope
+	scope event.SubscriptionScope
 }
 
 func (s *App) Calc(op byte, a, b int) int {
@@ -47,7 +49,7 @@ func (s *App) Calc(op byte, a, b int) int {
 // The app's SubscribeResults method starts sending calculation results to the given
 // channel. Subscriptions created through this method are tied to the lifetime of the App
 // because they are registered in the scope.
-func (s *App) SubscribeResults(op byte, ch chan<- int) Subscription {
+func (s *App) SubscribeResults(op byte, ch chan<- int) event.Subscription {
 	switch op {
 	case '/':
 		return s.scope.Track(s.divServer.results.Subscribe(ch))
@@ -63,7 +65,7 @@ func (s *App) Stop() {
 	s.scope.Close()
 }
 
-func ExampleSubscriptionScope() {
+func main() {
 	// Create the app.
 	var (
 		app  App
