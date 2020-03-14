@@ -1,5 +1,5 @@
 #!/bin/sh
 git add .
-date=`date`
+date=$(date)
 git commit -m "Lazy push: $date"
 git push
