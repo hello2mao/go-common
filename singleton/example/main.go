@@ -14,7 +14,7 @@ type TestConfig struct {
 
 func initConfig() (interface{}, error) {
 	c := TestConfig{
-		Name:"Tom",
+		Name: "Tom",
 	}
 	return c, nil
 }
@@ -22,11 +22,11 @@ func initConfig() (interface{}, error) {
 var instance = singleton.NewSingleton(initConfig)
 
 func GetInstance() TestConfig {
-    s, err := instance.Get()
-    if err != nil {
-        panic("get instance err:" + err.Error())
-    }
-    return s.(TestConfig)
+	s, err := instance.Get()
+	if err != nil {
+		panic("get instance err:" + err.Error())
+	}
+	return s.(TestConfig)
 }
 
 // ------------------------------------------

@@ -1,4 +1,3 @@
-// Package event is a wrapper for a monotonic clock source
 package event
 
 import (
