@@ -14,9 +14,10 @@ Common libraries for Golang.
 * [diff](https://github.com/hello2mao/go-common/diff)
 * [event](https://github.com/hello2mao/go-common/event)
 * [executor](https://github.com/hello2mao/go-common/executor)
+* [fabric_client](https://github.com/hello2mao/go-common/fabric_client)
+* [mq](https://github.com/hello2mao/go-common/mq)
 * [rand](https://github.com/hello2mao/go-common/rand)
 * [roles](https://github.com/hello2mao/go-common/roles)
 * [runtime](https://github.com/hello2mao/go-common/runtime)
 * [singleton](https://github.com/hello2mao/go-common/singleton)
 * [wait](https://github.com/hello2mao/go-common/wait)
-

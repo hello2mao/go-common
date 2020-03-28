@@ -6,6 +6,9 @@ require (
 	github.com/aristanetworks/goarista v0.0.0-20200306225906-e0480e715858
 	github.com/davecgh/go-spew v1.1.1
 	github.com/google/go-cmp v0.4.0
+	github.com/hyperledger/fabric-amcl v0.0.0-20200128223036-d1aa2665426a // indirect
+	github.com/hyperledger/fabric-lib-go v1.0.0 // indirect
+	github.com/hyperledger/fabric-sdk-go v1.0.0-alpha5
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.4.2
 	github.com/stretchr/testify v1.4.0
