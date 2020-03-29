@@ -17,7 +17,6 @@ Common libraries for Golang.
 * [fabric_client](https://github.com/hello2mao/go-common/fabric_client)
 * [mq](https://github.com/hello2mao/go-common/mq)
 * [rand](https://github.com/hello2mao/go-common/rand)
-* [roles](https://github.com/hello2mao/go-common/roles)
 * [runtime](https://github.com/hello2mao/go-common/runtime)
 * [singleton](https://github.com/hello2mao/go-common/singleton)
 * [wait](https://github.com/hello2mao/go-common/wait)
