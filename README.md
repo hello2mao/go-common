@@ -5,7 +5,7 @@ https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/6874
 )](https://godoc.org/github.com/hello2mao/go-common)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hello2mao/go-common)](https://goreportcard.com/report/github.com/hello2mao/go-common)
 
-Common libraries for Golang.
+Common golang library collections.
 
 ## The modules
 
@@ -15,6 +15,7 @@ Common libraries for Golang.
 * [event](https://github.com/hello2mao/go-common/event)
 * [executor](https://github.com/hello2mao/go-common/executor)
 * [fabric_client](https://github.com/hello2mao/go-common/fabric_client)
+* [fsm](https://github.com/hello2mao/go-common/fsm)
 * [mq](https://github.com/hello2mao/go-common/mq)
 * [rand](https://github.com/hello2mao/go-common/rand)
 * [roles](https://github.com/hello2mao/go-common/roles)
