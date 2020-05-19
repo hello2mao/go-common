@@ -16,7 +16,6 @@ Common golang library collections.
 * [executor](https://github.com/hello2mao/go-common/executor)
 * [fsm](https://github.com/hello2mao/go-common/fsm)
 * [mq](https://github.com/hello2mao/go-common/mq)
-* [pool](https://github.com/hello2mao/go-common/pool)
 * [rand](https://github.com/hello2mao/go-common/rand)
 * [roles](https://github.com/hello2mao/go-common/roles)
 * [runtime](https://github.com/hello2mao/go-common/runtime)
