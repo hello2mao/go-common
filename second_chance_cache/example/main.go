@@ -13,6 +13,7 @@ func main() {
 	if !exist {
 		os.Exit(-1)
 	}
+
 	fmt.Printf("a: %v\n", value.(int))
 }
 
