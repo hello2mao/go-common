@@ -10,7 +10,7 @@ jobs:
 
   test:
     name: Test
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
 
     - name: Set up Go 1.x
