@@ -8,8 +8,8 @@ on:
 
 jobs:
 
-  build:
-    name: Build
+  test:
+    name: Test
     runs-on: macos-latest
     steps:
 
@@ -30,8 +30,14 @@ jobs:
             dep ensure
         fi
 
-    - name: Build
-      run: go build -v .
-
     - name: Test
       run: go test -timeout 15s ./...
+
+    - name: Test coverage
+      run: go test -race -coverprofile=coverage.txt -covermode=atomic ./...
+
+    - name: Upload Coverage report to CodeCov
+        uses: codecov/codecov-action@v1.0.0
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
+          file: ./coverage.txt
