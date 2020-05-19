@@ -10,7 +10,7 @@ jobs:
 
   test:
     name: Test
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
 
     - name: Set up Go 1.x
@@ -37,7 +37,7 @@ jobs:
       run: go test -race -coverprofile=coverage.txt -covermode=atomic ./...
 
     - name: Upload Coverage report to CodeCov
-      uses: codecov/codecov-action@v1.0.0
+      uses: codecov/codecov-action@v1
       with:
         token: ${{secrets.CODECOV_TOKEN}}
         file: ./coverage.txt
