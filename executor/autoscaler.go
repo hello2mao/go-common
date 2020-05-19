@@ -77,17 +77,19 @@ func (s *Autoscaler) WaitForAllJobsDone() {
 
 // AddJobBlocked add new job to autoscaler
 func (s *Autoscaler) AddJobBlocked(job Job) error {
+	s.jobWg.Add(1)
 	err := WriteChanWithTimeout(s.jobChan, job, s.scaleUpThreshold)
 	if err != nil {
 		success := s.scaleUp()
 		if success {
 			s.jobChan <- job
 			log.Debugf("autoscaler scale up, current count: %d", s.ActiveWorkerCount())
+			return nil
 		} else {
+			s.jobWg.Done()
 			return fmt.Errorf("heavy load, try again later")
 		}
 	}
-	s.jobWg.Add(1)
 	return nil
 }
 
