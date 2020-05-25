@@ -21,5 +21,6 @@ Common golang library collections.
 * [roles](https://github.com/hello2mao/go-common/roles)
 * [runtime](https://github.com/hello2mao/go-common/runtime)
 * [second_chance_cache](https://github.com/hello2mao/go-common/second_chance_cache)
+  * This package implements Second-Chance Algorithm, an approximate LRU algorithms.
 * [singleton](https://github.com/hello2mao/go-common/singleton)
 * [wait](https://github.com/hello2mao/go-common/wait)
