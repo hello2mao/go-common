@@ -6,24 +6,30 @@ https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/6874
 [![Go Report Card](https://goreportcard.com/badge/github.com/hello2mao/go-common)](https://goreportcard.com/report/github.com/hello2mao/go-common)
 [![codecov](https://codecov.io/gh/hello2mao/go-common/branch/master/graph/badge.svg)](https://codecov.io/gh/hello2mao/go-common)
 
-Common golang library collections.
+Most useful, high performance, safe golang common library.
 
 ## Stable
 
 * [second_chance_cache](stable/second_chance_cache)
   * This package implements Second-Chance Algorithm, an approximate LRU algorithms.
-
+* [singleton](stable/singleton)
+  * A safe singleton.
+* [csp](stable/csp)
+  * Cryptographic service provider: all kinds of AES/ECDSA/HASH.
+* [wait](stable/wait)  
+  * Wait/Retry for something to happen.
+  
 ## Incubator
 
 * [clock](incubator/clock)
-* [csp (cryptographic service provider)](incubator/csp)
 * [diff](incubator/diff)
 * [event](incubator/event)
 * [executor](incubator/executor)
 * [fsm](incubator/fsm)
-* [mq](incubator/mq)
 * [rand](incubator/rand)
 * [roles](incubator/roles)
 * [runtime](incubator/runtime)
-* [singleton](incubator/singleton)
-* [wait](incubator/wait)
+
+## Example
+
+See example dir in submodule.
